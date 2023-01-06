@@ -472,41 +472,52 @@
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button type="button" class="close-btn" data-modal-close>X</button>
+
                 <div class="form-wrapper">
                     <p class="form-header-text">Zostaw swoje dane w formularzu poniżej</p>
-
                     <form>
-                        <label for="user_name" class="form-box">
-                            <p class="form-box-description">Imię</p>
+                        <div class="label-wrapper">
+                            <label for="user_name">
+                                <p class="form-box-description">Imię</p>
+                            </label>
+
                             <input type="name" name="name" id="user_name" required />
                             <svg width="18" height="18" class="form-icons">
                                 <use href="./images/form-icons.svg#icon-person-black-18dp-1"></use>
                             </svg>
-                        </label>
-                        <label for="user_phone" class="form-box">
-                            <p class="form-box-description">Telefon</p>
-                            <input type="phone" name="phone" id="user_phone" required />
+                        </div>
+                        <div class="label-wrapper">
+                            <label for="user_phone"
+                                ><p class="form-box-description">Telefon</p>
+                            </label>
+
+                            <input type="user_phone" name="name" id="user_phone" required />
                             <svg width="18" height="18" class="form-icons">
                                 <use href="./images/form-icons.svg#icon-phone-black-18dp-1"></use>
                             </svg>
-                        </label>
-                        <label for="user_email" class="form-box">
-                            <p class="form-box-description">E-mail</p>
-                            <input type="email" name="email" id="user_email" required />
+                        </div>
+                        <div class="label-wrapper">
+                            <label for="user_email"
+                                ><p class="form-box-description">E-mail</p>
+                            </label>
+
+                            <input type="user_email" name="name" id="user_email" required />
                             <svg width="18" height="18" class="form-icons">
                                 <use href="./images/form-icons.svg#icon-email-black-18dp-1"></use>
                             </svg>
-                        </label>
-                        <label for="comment">
-                            <p class="form-box-description">Komentarz</p>
+                        </div>
+                        <div class="label-wrapper">
+                            <label for="comment">
+                                <p class="form-box-description">Komentarz</p>
+                            </label>
+
                             <textarea
                                 name="feedback"
                                 rows="5"
                                 placeholder="Wprowadź tekst"
                             ></textarea>
-                        </label>
-
-                        <label class="term-conditions">
+                        </div>
+                        <div class="term-conditions">
                             <input
                                 type="checkbox"
                                 name="conditions"
@@ -514,14 +525,19 @@
                                 id="conditions"
                                 required
                             />
-                            <svg width="18" height="18" class="check-icon">
+                            <label
+                                ><p class="form-footer-text">
+                                    Oświadczam iż akceptuję Regulamin i Politykę Prywatności.
+                                </p></label
+                            >
+                            <svg width="11" height="18" class="check-icon">
                                 <use href="./images/icon-check.svg#icon-Vector"></use>
                             </svg>
-                            <p class="form-footer-text">
-                                Oświadczam iż akceptuję Regulamin i Politykę Prywatności.
-                            </p>
-                            <button type="submit" class="button-form">Wyślij</button>
-                        </label>
+                        </div>
+
+                        <div>
+                            <button type="sumbmit" class="button-form">Wyślij</button>
+                        </div>
                     </form>
                 </div>
             </div>

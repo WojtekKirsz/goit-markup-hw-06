@@ -664,10 +664,91 @@ fieldset {
     align-items: center;
 }
 
+.send-icon {
+    margin-left: 24px;
+}
+
+.form-wrapper input:hover,
+.form-wrapper input:focus {
+    border-color: var(--standard-blue);
+    fill: var(--standard-blue);
+}
+
+.checkbox:hover {
+    border-color: var(--standard-blue);
+    fill: var(--standard-blue);
+}
+
 .form-wrapper {
     padding: 40px 40px;
     height: 581px;
     width: 528px;
+}
+
+.label-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-box-description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.label-wrapper input {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-bottom: 15px;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.label-wrapper textarea {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-bottom: 15px;
+    width: 448px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+}
+
+textarea::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-icons {
+    position: absolute;
+    left: 12px;
+    top: 27px;
+}
+
+.form-footer-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
 }
 
 .form-header-text {
@@ -682,20 +763,19 @@ fieldset {
     margin-bottom: 12px;
 }
 
-form,
-label {
+.term-conditions {
+    margin-top: 10px;
+    margin-bottom: 30px;
     display: flex;
-    flex-direction: column;
+    gap: 7px;
+    position: relative;
+    justify-content: center;
 }
 
-.form-footer-text {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #757575;
+.check-icon {
+    position: absolute;
+    left: 18px;
+    top: 3px;
 }
 
 .button-form {
@@ -714,101 +794,4 @@ label {
     height: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-}
-
-.form-wrapper input {
-    margin-top: 4px;
-    margin-bottom: 10px;
-    padding-top: 15px;
-    padding-left: 16px;
-    padding-bottom: 15px;
-    width: 448px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-
-.form-wrapper textarea {
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    margin-top: 4px;
-    margin-bottom: 10px;
-    padding-top: 15px;
-    padding-left: 16px;
-    padding-bottom: 15px;
-    border-radius: 4px;
-    resize: none;
-}
-
-.form-box-description {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: #757575;
-}
-
-textarea::placeholder {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
-
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus {
-    border-color: var(--standard-blue);
-    fill: var(--standard-blue);
-}
-
-.form-icons {
-    position: absolute;
-    left: 12px;
-    top: 27px;
-}
-
-.send-icon {
-    margin-left: 24px;
-}
-
-.form-box:hover,
-.form-box:focus {
-    border-color: var(--standard-blue);
-    fill: var(--standard-blue);
-}
-
-.form-box {
-    position: relative;
-}
-
-.term-conditions input {
-    height: inherit;
-    width: fit-content;
-    padding: inherit;
-}
-
-.term-conditions {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    display: flex;
-    gap: 7px;
-    justify-content: center;
-    position: relative;
-}
-
-.check-icon {
-    position: absolute;
-    left: 15px;
-    top: 1px;
-}
-
-.checkbox:hover {
-    border-color: var(--standard-blue);
-    fill: var(--standard-blue);
 }
