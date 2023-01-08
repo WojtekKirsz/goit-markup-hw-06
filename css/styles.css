@@ -294,6 +294,10 @@ body {
     color: var(--standard-black);
 }
 
+.links-format-form-footer {
+    color: var(--standard-blue);
+}
+
 .links-format-agency-active {
     text-decoration: none;
     color: var(--standard-blue);
@@ -596,8 +600,8 @@ body {
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translateY(0);
-    width: 528px;
-    min-height: 581px;
+    max-width: 528px;
+    padding: 40px;
     background-color: var(--standard-white);
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -624,7 +628,6 @@ body {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     width: 358px;
-    height: 50px;
     left: 815px;
     top: 2787px;
     background: #2f303a;
@@ -648,41 +651,71 @@ fieldset {
     display: flex;
 }
 
-.button-newsletter {
-    font-family: 'Roboto', sans-serif;
-    color: var(--standard-white);
+.button-newsletter-wrapper {
     background: var(--standard-blue);
     margin-left: 12px;
     margin-top: 20px;
-    height: 50px;
-    width: 200px;
-    display: flex;
+    border: none;
+    cursor: pointer;
+}
+
+.button-newsletter-text {
+    font-family: 'Roboto', sans-serif;
+    color: var(--standard-white);
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.06em;
-    padding-left: 42px;
+    margin: 10px 24px 10px 42px;
+}
+
+.button-newsletter {
+    display: flex;
     align-items: center;
 }
 
 .send-icon {
-    margin-left: 24px;
+    margin: 13px 28px 13px 0;
 }
 
-.form-wrapper input:hover,
-.form-wrapper input:focus {
+/* .form-wrapper input:hover,
+.form-wrapper input:focus-within {
     border-color: var(--standard-blue);
     fill: var(--standard-blue);
+} */
+
+/* .label-wrapper:hover,
+.label-wrapper:focus {
+    border-color: var(--standard-blue);
+    fill: var(--standard-blue);
+    outline: none;
+} */
+
+/* .label-wrapper svg:hover {
+    fill: var(--standard-blue);
+} */
+
+/* .label-wrapper input:hover,
+.label-wrapper input:focus {
+    fill: var(--standard-blue);
+    border-color: var(--standard-blue);
+} */
+
+.label-wrapper:hover,
+.label-wrapper:focus {
+    fill: var(--standard-blue);
+    border-color: var(--standard-blue);
+    outline: none;
+}
+
+.label-wrapper textarea:hover,
+.label-wrapper textarea:focus {
+    border-color: var(--standard-blue);
+    outline: none;
 }
 
 .checkbox:hover {
     border-color: var(--standard-blue);
     fill: var(--standard-blue);
-}
-
-.form-wrapper {
-    padding: 40px 40px;
-    height: 581px;
-    width: 528px;
 }
 
 .label-wrapper {
@@ -705,12 +738,15 @@ fieldset {
     margin-top: 4px;
     margin-bottom: 10px;
     padding-top: 15px;
-    padding-left: 16px;
+    padding-left: 42px;
     padding-bottom: 15px;
     width: 448px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: var(--standard-black);
 }
 
 .label-wrapper textarea {
@@ -723,6 +759,9 @@ fieldset {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: var(--standard-black);
 }
 
 textarea::placeholder {
@@ -738,7 +777,7 @@ textarea::placeholder {
 .form-icons {
     position: absolute;
     left: 12px;
-    top: 27px;
+    top: 15px;
 }
 
 .form-footer-text {

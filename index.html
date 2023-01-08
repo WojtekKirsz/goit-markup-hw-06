@@ -452,13 +452,15 @@
                                     </label>
 
                                     <div>
-                                        <button type="submit" class="button-newsletter">
-                                            Zapisz się
-                                            <svg width="24" height="24" class="send-icon">
-                                                <use
-                                                    href="./images/icon-send.svg#icon-icon-send"
-                                                ></use>
-                                            </svg>
+                                        <button type="submit" class="button-newsletter-wrapper">
+                                            <div class="button-newsletter">
+                                                <p class="test">Zapisz się</p>
+                                                <svg width="24" height="24" class="send-icon">
+                                                    <use
+                                                        href="./images/icon-send.svg#icon-icon-send"
+                                                    ></use>
+                                                </svg>
+                                            </div>
                                         </button>
                                     </div>
                                 </fieldset>
@@ -473,44 +475,38 @@
             <div class="modal">
                 <button type="button" class="close-btn" data-modal-close>X</button>
 
-                <div class="form-wrapper">
+                <div>
                     <p class="form-header-text">Zostaw swoje dane w formularzu poniżej</p>
-                    <form>
-                        <div class="label-wrapper">
-                            <label for="user_name">
-                                <p class="form-box-description">Imię</p>
-                            </label>
 
-                            <input type="name" name="name" id="user_name" required />
+                    <form>
+                        <label for="name"> <p class="form-box-description">Imię</p> </label>
+                        <div class="label-wrapper">
+                            <input type="name" name="name" id="name" required />
                             <svg width="18" height="18" class="form-icons">
                                 <use href="./images/form-icons.svg#icon-person-black-18dp-1"></use>
                             </svg>
                         </div>
-                        <div class="label-wrapper">
-                            <label for="user_phone"
-                                ><p class="form-box-description">Telefon</p>
-                            </label>
 
+                        <label for="user_phone"><p class="form-box-description">Telefon</p> </label>
+                        <div class="label-wrapper">
                             <input type="user_phone" name="name" id="user_phone" required />
                             <svg width="18" height="18" class="form-icons">
                                 <use href="./images/form-icons.svg#icon-phone-black-18dp-1"></use>
                             </svg>
                         </div>
-                        <div class="label-wrapper">
-                            <label for="user_email"
-                                ><p class="form-box-description">E-mail</p>
-                            </label>
 
+                        <label for="user_email"><p class="form-box-description">E-mail</p> </label>
+                        <div class="label-wrapper">
                             <input type="user_email" name="name" id="user_email" required />
                             <svg width="18" height="18" class="form-icons">
                                 <use href="./images/form-icons.svg#icon-email-black-18dp-1"></use>
                             </svg>
                         </div>
-                        <div class="label-wrapper">
-                            <label for="comment">
-                                <p class="form-box-description">Komentarz</p>
-                            </label>
 
+                        <label for="comment">
+                            <p class="form-box-description">Komentarz</p>
+                        </label>
+                        <div class="label-wrapper">
                             <textarea
                                 name="feedback"
                                 rows="5"
@@ -527,7 +523,11 @@
                             />
                             <label
                                 ><p class="form-footer-text">
-                                    Oświadczam iż akceptuję Regulamin i Politykę Prywatności.
+                                    Oświadczam iż akceptuję
+                                    <a href="#" class="links-format-form-footer">Regulamin</a> i
+                                    <a href="#" class="links-format-form-footer"
+                                        >Politykę Prywatności.</a
+                                    >
                                 </p></label
                             >
                             <svg width="11" height="18" class="check-icon">
