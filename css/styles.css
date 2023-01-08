@@ -610,11 +610,8 @@ body {
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 30px;
-    height: 30px;
     background-color: var(--standard-white);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+    border: none;
     cursor: pointer;
 }
 
@@ -705,6 +702,12 @@ fieldset {
     fill: var(--standard-blue);
     border-color: var(--standard-blue);
     outline: none;
+}
+
+.label-wrapper input:hover,
+.label-wrapper input:focus {
+    border-color: var(--standard-blue);
+    fill: var(--standard-blue);
 }
 
 .label-wrapper textarea:hover,
@@ -815,6 +818,54 @@ textarea::placeholder {
     position: absolute;
     left: 18px;
     top: 3px;
+}
+
+.term-conditions-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.term-conditions-wrapper input[type='checkbox'] {
+    background: #fff;
+    appearance: none;
+    outline: 1px solid #212121;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+.term-conditions-wrapper input[type='checkbox']::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    background-color: var(--standard-blue);
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    opacity: 0;
+}
+
+.term-conditions-wrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.term-conditions-wrapper input[type='checkbox']:checked + svg {
+    opacity: 1;
+    fill: var(--standard-white);
+}
+
+.term-conditions-wrapper input[type='checkbox']:checked::before {
+    opacity: 1;
+    outline: 1px solid var(--standard-blue);
 }
 
 .button-form {

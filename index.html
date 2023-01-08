@@ -473,15 +473,19 @@
 
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button type="button" class="close-btn" data-modal-close>X</button>
+                <button type="button" class="close-btn" data-modal-close>
+                    <svg width="30" height="30">
+                        <use href="./images/close-icon.svg#icon-close"></use>
+                    </svg>
+                </button>
 
                 <div>
                     <p class="form-header-text">Zostaw swoje dane w formularzu poniżej</p>
 
                     <form>
-                        <label for="name"> <p class="form-box-description">Imię</p> </label>
+                        <label for="user_name"> <p class="form-box-description">Imię</p> </label>
                         <div class="label-wrapper">
-                            <input type="name" name="name" id="name" required />
+                            <input type="user_name" name="name" id="user_name" required />
                             <svg width="18" height="18" class="form-icons">
                                 <use href="./images/form-icons.svg#icon-person-black-18dp-1"></use>
                             </svg>
@@ -513,7 +517,8 @@
                                 placeholder="Wprowadź tekst"
                             ></textarea>
                         </div>
-                        <div class="term-conditions">
+
+                        <label class="term-conditions-wrapper">
                             <input
                                 type="checkbox"
                                 name="conditions"
@@ -521,19 +526,17 @@
                                 id="conditions"
                                 required
                             />
-                            <label
-                                ><p class="form-footer-text">
-                                    Oświadczam iż akceptuję
-                                    <a href="#" class="links-format-form-footer">Regulamin</a> i
-                                    <a href="#" class="links-format-form-footer"
-                                        >Politykę Prywatności.</a
-                                    >
-                                </p></label
-                            >
-                            <svg width="11" height="18" class="check-icon">
+                            <svg width="11" height="8">
                                 <use href="./images/icon-check.svg#icon-Vector"></use>
                             </svg>
-                        </div>
+                            <p class="form-footer-text">
+                                Oświadczam iż akceptuję
+                                <a href="#" class="links-format-form-footer">Regulamin</a> i
+                                <a href="#" class="links-format-form-footer"
+                                    >Politykę Prywatności.</a
+                                >
+                            </p>
+                        </label>
 
                         <div>
                             <button type="sumbmit" class="button-form">Wyślij</button>
