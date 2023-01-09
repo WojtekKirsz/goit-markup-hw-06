@@ -654,6 +654,8 @@ fieldset {
     margin-top: 20px;
     border: none;
     cursor: pointer;
+    padding: 13px 26px 13px 42px;
+    border-radius: 4px;
 }
 
 .button-newsletter-text {
@@ -662,16 +664,12 @@ fieldset {
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.06em;
-    margin: 10px 24px 10px 42px;
 }
 
 .button-newsletter {
     display: flex;
     align-items: center;
-}
-
-.send-icon {
-    margin: 13px 28px 13px 0;
+    gap: 24px;
 }
 
 /* .form-wrapper input:hover,
@@ -697,16 +695,21 @@ fieldset {
     border-color: var(--standard-blue);
 } */
 
-.label-wrapper:hover,
+/* .label-wrapper:hover,
 .label-wrapper:focus {
     fill: var(--standard-blue);
     border-color: var(--standard-blue);
     outline: none;
-}
+} */
 
 .label-wrapper input:hover,
 .label-wrapper input:focus {
     border-color: var(--standard-blue);
+    /* fill: var(--standard-blue); */
+}
+
+.label-wrapper input:hover + svg,
+.label-wrapper input:focus + svg {
     fill: var(--standard-blue);
 }
 
@@ -750,6 +753,7 @@ fieldset {
     font-size: 16px;
     letter-spacing: 0.01em;
     color: var(--standard-black);
+    outline: none;
 }
 
 .label-wrapper textarea {
@@ -832,7 +836,7 @@ textarea::placeholder {
 .term-conditions-wrapper input[type='checkbox'] {
     background: #fff;
     appearance: none;
-    outline: 1px solid #212121;
+    border: 1px solid #212121;
     width: 16px;
     height: 15px;
     border-radius: 2px;
@@ -847,6 +851,8 @@ textarea::placeholder {
     border-radius: 2px;
     display: block;
     position: absolute;
+    left: 15px;
+    top: 4px;
     opacity: 0;
 }
 
@@ -865,7 +871,7 @@ textarea::placeholder {
 
 .term-conditions-wrapper input[type='checkbox']:checked::before {
     opacity: 1;
-    outline: 1px solid var(--standard-blue);
+    /* outline: 1px solid var(--standard-blue); */
 }
 
 .button-form {
